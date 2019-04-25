@@ -1,0 +1,83 @@
+@import 'resets';
+@import 'mixins';
+@import 'variables';
+@import 'base';
+@import 'fonts';
+@import 'effectsClasses';
+
+
+//Main nav styles
+#main-nav{
+  display:flex;
+  position:fixed;
+  top:0;
+  right:0;
+  list-style: none;
+  li {
+    width: 150px;
+    margin:1%;
+    &:hover{
+      color:orange;
+      transition:all 0.5s;
+    }
+  }
+}
+
+//Introduction container styles
+.container{
+  border: 2px solid black;
+  @include gradient(to bottom, rgba(157,246,90,0.3) 3%, rgba(124,42,257,0.3));
+  height: 100vh;
+  div {
+    &.headline{
+      font-size: 6rem;
+      text-align: left;
+    }
+  }
+}
+
+//about session styles
+.about{
+  height:100vh;
+  width:100vh;
+
+  img {
+    width: 200px;
+    height:200px;
+    border-radius: 100%;
+  }
+}
+
+//projects session styles
+.projects {
+  h1,h2{
+    margin:3%;
+    margin-top: 0;
+    margin-bottom: 50px;
+  }
+  .project-container{
+    margin:2%;
+    height: 400px;
+    border-bottom: 1px solid orange;
+    img{
+      width: 50%;
+      float:left;
+      margin:2%;
+      margin-top: 0;
+    }
+    p{
+      font-size: 1rem;
+      margin:3%;
+    }
+    .show-more{
+      display:block;
+    }
+    section{
+      margin:1%;
+      li{
+        list-style: none;
+        margin-top: 20px;
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+@mixin gradient($direction:to right, $color1: black, $color2: red){
+  background-image: linear-gradient($direction, $color1, $color2), url('../../../dist/images/pier.jpeg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
