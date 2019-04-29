@@ -5,79 +5,139 @@
 @import 'fonts';
 @import 'effectsClasses';
 
-
 //Main nav styles
 #main-nav{
   display:flex;
+  justify-content: flex-end;
+  background: $backgrounds-color;
   position:fixed;
+  width: 100%;
   top:0;
   right:0;
   list-style: none;
   li {
     width: 150px;
     margin:1%;
+    font-size: 1.3rem;
     &:hover{
-      color:orange;
-      transition:all 0.5s;
+      color:$secondary-color;
+      transition:all 0.3s;
     }
   }
 }
 
 //Introduction container styles
 .container{
-  border: 2px solid black;
-  @include gradient(to bottom, rgba(157,246,90,0.3) 3%, rgba(124,42,257,0.3));
-  height: 100vh;
+  margin-left: 50px;
+  display: flex;
+  flex-direction: column;
   div {
     &.headline{
+      margin-top: 50px;
+      color:$secondary-color;
       font-size: 6rem;
       text-align: left;
+      margin-left: 1%;
     }
+    &.headline1{
+      font-weight: bold;
+      letter-spacing: 8px;
+      font-size: 6.3rem;
+    }
+    &.headline2{
+      margin-top: 0px;
+      opacity: 0.6;
+    }
+    &.subtitle{
+      margin-left: 1.5%;
+      text-transform: uppercase;
+      font-size: 1.4rem;
+      letter-spacing: 2.3px;
+      margin-top: 10px;
+    }
+  }
+  img {
+    align-self: flex-end;
+    width: 1000px;
+    opacity: 0.8;
+    transform: rotateY(180deg);
   }
 }
 
 //about session styles
 .about{
-  height:100vh;
-  width:100vh;
-
+  margin-left: 50px;
   img {
-    width: 200px;
-    height:200px;
-    border-radius: 100%;
+    transform: rotateY(180deg);
+    position: absolute;
+    bottom:0;
+    right: 0;
+    width: 500px;
+    height:500px;
   }
 }
 
 //projects session styles
 .projects {
-  h1,h2{
+  h1{
     margin:3%;
-    margin-top: 0;
+  //  margin-top: 0;
     margin-bottom: 50px;
   }
   .project-container{
-    margin:2%;
-    height: 400px;
-    border-bottom: 1px solid orange;
-    img{
-      width: 50%;
-      float:left;
-      margin:2%;
-      margin-top: 0;
+    display:flex;
+    align-items: flex-start;
+    margin:3%;
+    padding-bottom: 40px;
+    //height: 400px;
+    height: auto;
+    border-bottom: 1.5px solid $secondary-color;
+    .project-description{
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+      h2 {
+        font-size: 1.3rem;
+        margin-left: 3%;
+      }
+      p{
+        font-size: 1rem;
+        margin:3%;
+      }
+      .show-more{
+        width: 20%;
+        padding-left: 10px;
+        border-radius: 6px;
+      }
+
+      section{
+        margin:3%;
+        li{
+          list-style: none;
+          margin-top: 20px;
+        }
+      }
     }
-    p{
-      font-size: 1rem;
-      margin:3%;
-    }
-    .show-more{
-      display:block;
-    }
-    section{
-      margin:1%;
-      li{
-        list-style: none;
-        margin-top: 20px;
+    a{
+      width: 100%;
+      display:flex;
+      justify-content: center;
+      img{
+        //border: 1px solid $secondary-color;
+        align-self: center;
+        width: 80%;
+        float:left;
+        //margin:1%;
+        margin-top: 0;
       }
     }
   }
 }
+
+
+
+
+
+
+
+@import 'mediaqueries';

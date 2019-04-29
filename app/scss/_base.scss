@@ -1,16 +1,20 @@
+
 body {
-  height: 100vh;
+  height: 90%;
+  margin: 0 auto;
   font-family: 'Roboto Mono', monospace, mono;
 }
 
 h1,h2,h3,h4,h5,h6 {
-  color:orange;
+  color:$secondary-color;
 }
 
 h1{
   font-size: 4rem;
+  margin-top: 50px;
 }
 
 p {
   font-size: 1rem;
+  line-height: 1.5;
 }
