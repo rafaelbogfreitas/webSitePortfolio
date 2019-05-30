@@ -2,49 +2,69 @@ $(document).ready(function(){
   //Hides the main content, leaving only the intro session displayed
   $('.content').hide();
 
-  //creates an underline on the nav item when pages is selected
-  $('#main-nav li').on('click', function (event){
-    $(event.currentTarget).css({'text-decoration': 'underline', 'color':'orange'}).siblings()
-    .css({'text-decoration':'none', 'color':'black'});
-  });
+  //highlights the current page in the NAV
+  $('#main-nav li').on('click', function(event){
+    if($(event.currentTarget).prop('id') != 'down-arrow'){
+      $(event.currentTarget).addClass('selected').siblings().removeClass('selected');
+    } else if ($(event.currentTarget).prop('id') == 'down-arrow'){
+      $(event.currentTarget).siblings().removeClass('selected');
+    }
+
+  })
 
   //Intro button 'click' event listener
   $('#intro-btn').on('click', function(){
     $('.container').show();
     $('.content').hide();
-    $('.about').show();
   });
 
   //About button 'click' event listener
   $('#about-btn').on('click', function(){
     $('.container').hide();
-    $('.content').show();
-    $('.about').show();
-    $('.projects').hide();
+    $('.content').show().find('.about').show().siblings().hide();
   });
 
-  //About button 'projects' event listener
+  //Projects button 'click' event listener
   $('#projects-btn').on('click', function(){
-    $('.content').show();
-    $('.container').slideUp(200);
-    $('.about').hide();
-    $('.projects').show();
+    $('.container').hide();
+    $('.content').show().find('.projects').show().siblings().hide();
     window.scrollTo(0, 0);
+  });
+
+  //Contact button 'click' event listener
+  $('#contact-btn').on('click', function(){
+    $('.container').hide();
+    $('.content').show().find('.contact').show().siblings().hide();
   });
 
   //Show more section
   $('.more').hide();
   $('.show-more').on('click', function(event){
-    $(event.currentTarget).next().toggle();
+    //$(event.currentTarget).next().toggle();
+    $(event.currentTarget).parent().parent().next().slideToggle(100);
     if($(event.currentTarget).html() == 'Show More +'){
       $(event.currentTarget).html('Show Less -');
     } else {
       $(event.currentTarget).html('Show More +');
     };
   }).on('mouseover', function(event){
-    $(event.currentTarget).addClass('highlight');
+    $(event.currentTarget).addClass('highlight').css({'color':'white'});
   }).on('mouseleave', function(event){
-    $(event.currentTarget).removeClass('highlight');
+    $(event.currentTarget).removeClass('highlight').css({'color':'orange'});
+  }).on('touchend', function(){
+    $(event.currentTarget).removeClass('highlight').css({'color':'orange'});
+  });
+
+  //controls dropdown effect for the NAV in mobile version
+  $('#down-arrow').on('click', function(){
+    $('#down-arrow').siblings().slideToggle(100);
+  });
+
+  //displays the NAV if the window is rezised after using it in mobile version
+  $(window).on('resize', function(){
+    if(window.innerWidth > 500){
+      $('#down-arrow').siblings().show();
+    }
   });
 
 });

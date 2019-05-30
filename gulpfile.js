@@ -37,4 +37,8 @@ gulp.task('watch', function(){
   gulp.watch('app/**/*.scss', gulp.series('sass'));
 });
 
-//
+//copy fonts to dist
+gulp.task('fonts', function(){
+	return gulp.src('app/fonts/**/*')
+		.pipe(gulp.dest('dist/fonts'))
+})
