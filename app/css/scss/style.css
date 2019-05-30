@@ -75,7 +75,7 @@ a {
   color: orange;
   transform: scale(1.1); }
 
-#main-nav {
+#navbar {
   display: flex;
   justify-content: flex-end;
   z-index: 5;
@@ -85,16 +85,16 @@ a {
   top: 0;
   right: 0;
   list-style: none; }
-  #main-nav li {
+  #navbar li {
     display: block;
     width: 150px;
     margin: 1%;
     font-size: 1.3rem;
     text-align: center; }
-    #main-nav li#down-arrow {
+    #navbar li#down-arrow {
       display: none;
       border-bottom: 1px solid orange; }
-    #main-nav li:hover {
+    #navbar li:hover {
       color: orange;
       transition: all 0.3s; }
 
@@ -102,7 +102,7 @@ a {
   margin: 3%;
   min-height: 100vh;
   display: flex;
-  flex-direction: row; }
+  flex-direction: column; }
   .container .title-container .icons-container {
     position: absolute;
     width: 50%;
@@ -159,45 +159,45 @@ a {
   .projects h1 {
     margin: 5%;
     margin-bottom: 50px; }
-  .projects .project-container {
+  .projects .project-tile {
     display: flex;
     align-items: flex-start;
     margin: 5%;
     padding-bottom: 40px;
     height: auto;
     border-bottom: 1.5px solid orange; }
-    .projects .project-container .project-description {
+    .projects .project-tile .project-description {
       display: flex;
       flex-direction: column;
       width: 90%; }
-      .projects .project-container .project-description h2 {
+      .projects .project-tile .project-description h2 {
         font-size: 1.3rem;
         margin-left: 3%; }
-      .projects .project-container .project-description p {
+      .projects .project-tile .project-description p {
         font-size: 1rem;
         margin: 3%; }
-        .projects .project-container .project-description p a {
+        .projects .project-tile .project-description p a {
           color: orange; }
-      .projects .project-container .project-description .show-more {
+      .projects .project-tile .project-description .show-more {
         width: 20%;
         padding-left: 10px;
         padding-right: 10px;
         border-radius: 6px;
         color: orange; }
-      .projects .project-container .project-description i {
+      .projects .project-tile .project-description i {
         color: orange;
         font-size: 2rem; }
-      .projects .project-container .project-description section {
+      .projects .project-tile .project-description section {
         margin: 3%; }
-        .projects .project-container .project-description section p {
+        .projects .project-tile .project-description section p {
           margin: -20px 0 10px; }
-        .projects .project-container .project-description section li {
+        .projects .project-tile .project-description section li {
           list-style: none;
           margin-top: 20px; }
-    .projects .project-container img {
+    .projects .project-tile img {
       width: 80%;
       margin-top: 0; }
-      .projects .project-container img:hover {
+      .projects .project-tile img:hover {
         transform: scale(1.1);
         transition: transform 0.2s; }
 
@@ -233,17 +233,17 @@ a {
     .projects h1 {
       text-align: center;
       margin-top: 6%; }
-    .projects .project-container {
+    .projects .project-tile {
       flex-direction: column;
       justify-content: center;
       align-items: center;
       margin-left: 0;
       width: 100%; }
-      .projects .project-container > a {
+      .projects .project-tile > a {
         display: flex;
         justify-content: center;
         align-items: center; }
-      .projects .project-container .project-description {
+      .projects .project-tile .project-description {
         margin-top: 30px; }
   .contact {
     margin-left: 0; }
@@ -255,11 +255,11 @@ a {
         padding: 3%; } }
 
 @media only screen and (max-width: 900px) {
-  #main-nav {
+  #navbar {
     display: flex;
     justify-content: center;
     border-bottom: 1px solid orange; }
-    #main-nav li {
+    #navbar li {
       padding: 5px;
       font-size: 1rem; }
   .container {
@@ -294,23 +294,23 @@ a {
     margin: auto; }
     .about img {
       display: none; }
-  #main-nav {
+  #navbar {
     flex-direction: column;
     align-items: center;
     width: 99%;
     margin: 0 auto;
     position: static;
     border-bottom: 0px; }
-    #main-nav li {
+    #navbar li {
       display: none;
       font-size: 1.2rem; }
-      #main-nav li#down-arrow {
+      #navbar li#down-arrow {
         position: relative;
         width: 99%;
         height: 20px;
         display: block;
         padding: 10px; }
-        #main-nav li#down-arrow .dropdown-container {
+        #navbar li#down-arrow .dropdown-container {
           display: flex;
           align-items: center;
           position: absolute;
@@ -318,9 +318,9 @@ a {
           top: 0;
           width: 15px;
           height: 100%; }
-          #main-nav li#down-arrow .dropdown-container .dropdown-icon,
-          #main-nav li#down-arrow .dropdown-container .dropdown-icon::before,
-          #main-nav li#down-arrow .dropdown-container .dropdown-icon::after {
+          #navbar li#down-arrow .dropdown-container .dropdown-icon,
+          #navbar li#down-arrow .dropdown-container .dropdown-icon::before,
+          #navbar li#down-arrow .dropdown-container .dropdown-icon::after {
             display: block;
             background: orange;
             width: 15px;
@@ -328,21 +328,21 @@ a {
             border-radius: 2px;
             position: relative;
             transform: scale(1.1); }
-          #main-nav li#down-arrow .dropdown-container .dropdown-icon::before,
-          #main-nav li#down-arrow .dropdown-container .dropdown-icon::after {
+          #navbar li#down-arrow .dropdown-container .dropdown-icon::before,
+          #navbar li#down-arrow .dropdown-container .dropdown-icon::after {
             content: "";
             position: absolute; }
-          #main-nav li#down-arrow .dropdown-container .dropdown-icon::before {
+          #navbar li#down-arrow .dropdown-container .dropdown-icon::before {
             bottom: 5px; }
-          #main-nav li#down-arrow .dropdown-container .dropdown-icon::after {
+          #navbar li#down-arrow .dropdown-container .dropdown-icon::after {
             top: 5px; }
   .projects {
     margin-top: 0;
     width: 95%; }
-    .projects .project-container {
+    .projects .project-tile {
       flex-direction: column; }
-      .projects .project-container > a {
+      .projects .project-tile > a {
         display: flex;
         justify-content: center; }
-      .projects .project-container .project-description {
+      .projects .project-tile .project-description {
         margin-left: 10px; } }

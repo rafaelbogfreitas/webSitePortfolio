@@ -14,7 +14,7 @@
       text-align: center;
       margin-top: 6%;
     }
-    .project-container{
+    .project-tile{
       flex-direction: column;
       justify-content: center;
       align-items: center;
@@ -47,7 +47,7 @@
 @media only screen and (max-width:900px){
 
   //NAV
-  #main-nav{
+  #navbar{
     display: flex;
     justify-content: center;
     border-bottom: 1px solid $secondary-color;
@@ -114,7 +114,7 @@
   }
 
   //NAV mobile styles
-  #main-nav{
+  #navbar{
     flex-direction: column;
     align-items: center;
     width: 99%;
@@ -170,7 +170,7 @@
   .projects{
     margin-top:0;
     width: 95%;
-    .project-container{
+    .project-tile{
       flex-direction:column;
       &>a {
         display:flex;

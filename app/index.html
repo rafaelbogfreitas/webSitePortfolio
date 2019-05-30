@@ -8,13 +8,18 @@
     <!-- endbuild -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
     <title>Rafael Freitas</title>
   </head>
   <body>
 
     <!-- NAV -->
     <nav>
-      <ul id="main-nav">
+      <ul id="navbar">
+        <a href="#welcome-section" style="display:none"></a>
         <li id="down-arrow">
           <div class="dropdown-container">
             <span class="dropdown-icon"></span>
@@ -28,30 +33,31 @@
     </nav>
 
     <!-- HOME section -->
-    <div class="container">
+    <div id="welcome-section" class="container">
+      <h1 style="display:none;">text</h1>
       <div class="title-container">
         <div class="headline headline1">RAFAEL</div>
         <div class="headline headline2">FREITAS</div>
         <div class="subtitle">Front-End Web Development</div>
         <div class="icons-container">
-          <a href="mailto:rafaelborges1985@hotmail.com">
+          <a target="_blank" href="mailto:rafaelborges1985@hotmail.com">
             <i class="fas fa-envelope-square contact-icons"></i>
           </a>
-          <a href="https://www.linkedin.com/in/rafael-borges-de-oliveira-gouveia-e-freitas-49b04016a/">
+          <a target="_blank" href="https://www.linkedin.com/in/rafael-borges-de-oliveira-gouveia-e-freitas-49b04016a/">
             <i class="fab fa-linkedin contact-icons"></i>
           </a>
-            <a href="https://github.com/rafaelbogfreitas">
+            <a target="_blank" href="https://github.com/rafaelbogfreitas">
             <i class="fas fa-code-branch contact-icons"></i>
           </a>
-          <a href="https://twitter.com/RafaelF03113877">
+          <a target="_blank" href="https://twitter.com/RafaelF03113877">
             <i class="fab fa-twitter-square contact-icons"></i>
           </a>
-          <a href="https://www.freecodecamp.org/rafaelborges">
+          <a id="profile-link" target="_blank" href="https://www.freecodecamp.org/rafaelborges">
             <i class="fab fa-free-code-camp"></i>
           </a>
         </div>
       </div>
-      <img src="images/rafael.svg" class="img-intro" alt="rafael drawing">
+      <!-- <img src="images/rafael.svg" class="img-intro" alt="rafael drawing"> -->
     </div>
 
     <!-- Page Content: About, Projects and Contact -->
@@ -100,13 +106,13 @@
       </div>
 
       <!-- PROJECTS section -->
-      <div class="projects">
+      <div id="projects" class="projects">
         <h1>My Projects</h1>
 
         <!-- PROJECT 1 Tribute page-->
-        <div class="project-container">
+        <div class="project-tile">
           <a href="https://codepen.io/rafaelbogfreitas/full/bzjZox" target="_blank">
-            <img src="images/tributePage.png" alt="tribute page website project">
+            <img src="https://raw.githubusercontent.com/rafaelbogfreitas/webSitePortfolio/master/app/images/tributePage.png" alt="tribute page website project">
           </a>
           <!-- Project Description -->
           <div class="project-description">
@@ -134,9 +140,9 @@
         </div>
 
         <!-- PROJECT 2 Form Project -->
-        <div class="project-container">
+        <div class="project-tile">
           <a href="https://codepen.io/rafaelbogfreitas/full/EGMoyX" target="_blank">
-            <img src="images/formproject.png" alt="form website project">
+            <img src="https://raw.githubusercontent.com/rafaelbogfreitas/webSitePortfolio/master/app/images/formproject.png" alt="form website project">
           </a>
           <!-- Project Description -->
           <div class="project-description">
@@ -161,9 +167,9 @@
         </div>
 
         <!-- PROJECT 3 Product Landing Page-->
-        <div class="project-container">
+        <div class="project-tile">
           <a href="https://codepen.io/rafaelbogfreitas/full/YdgYed" target="_blank">
-            <img src="images/productLanding.png" alt="form website project">
+            <img src="https://raw.githubusercontent.com/rafaelbogfreitas/webSitePortfolio/master/dist/images/productLanding.png" alt="form website project">
           </a>
           <!-- Project Description -->
           <div class="project-description">
@@ -194,9 +200,9 @@
         </div>
 
         <!--PROJECT 4  Technical Documentation Page-->
-        <div class="project-container">
+        <div class="project-tile">
           <a href="https://codepen.io/rafaelbogfreitas/full/BEQBvO" target="_blank">
-            <img src="images/technicaldoc.png" alt="form website project">
+            <img src="https://raw.githubusercontent.com/rafaelbogfreitas/webSitePortfolio/master/dist/images/technicaldoc.png" alt="form website project">
           </a>
           <!-- Project Description -->
           <div class="project-description">
@@ -222,9 +228,9 @@
         </div>
 
         <!-- PROJECT 5  AG Photography Website-->
-        <div class="project-container">
+        <div class="project-tile">
           <a href="https://codepen.io/rafaelbogfreitas/full/magJpe" target="_blank">
-            <img src="images/arturasGrimalis.png" alt="form website project">
+            <img src="https://raw.githubusercontent.com/rafaelbogfreitas/webSitePortfolio/master/dist/images/arturasgrimalis.png" alt="form website project">
           </a>
           <!-- Project Description -->
           <div class="project-description">
@@ -260,7 +266,7 @@
         </div>
 
         <!-- PROJECT 6 Portfolio Website -->
-        <div class="project-container">
+        <div class="project-tile">
           <a href="www.rafaelfreitas.co.uk" target="_blank">
             <img src="images/webPortfolio.png" alt="website portfolio">
           </a>

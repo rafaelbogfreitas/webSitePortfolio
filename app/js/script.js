@@ -3,7 +3,7 @@ $(document).ready(function(){
   $('.content').hide();
 
   //highlights the current page in the NAV
-  $('#main-nav li').on('click', function(event){
+  $('#navbar li').on('click', function(event){
     if($(event.currentTarget).prop('id') != 'down-arrow'){
       $(event.currentTarget).addClass('selected').siblings().removeClass('selected');
     } else if ($(event.currentTarget).prop('id') == 'down-arrow'){
