@@ -94,6 +94,7 @@
 
 //about session styles
 .about{
+  display:flex;
   margin: 3%;
   h1 {
     margin:5%;
@@ -101,7 +102,7 @@
   p {
     margin-top: 20px;
     margin: 5%;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     line-height: 30px;
   }
 
@@ -110,6 +111,27 @@
     width: 30%;
   }
 }
+
+.about-wrap{
+  width:60%;
+}
+
+.skills {
+  width: 40%;
+  height:100vh;
+  display:flex;
+  justify-content: center;
+}
+
+.skills-box{
+  border:1px solid $secondary-color;
+  border-radius: 10px;
+  height:80vh;
+  width: 30%;
+  align-self: center;
+  position: fixed;
+}
+
 
 //PROJECTS section styles
 .projects {

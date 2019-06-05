@@ -142,17 +142,35 @@ a {
     transform: rotateY(180deg); }
 
 .about {
+  display: flex;
   margin: 3%; }
   .about h1 {
     margin: 5%; }
   .about p {
     margin-top: 20px;
     margin: 5%;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     line-height: 30px; }
   .about img {
     transform: rotateY(180deg);
     width: 30%; }
+
+.about-wrap {
+  width: 60%; }
+
+.skills {
+  width: 40%;
+  height: 100vh;
+  display: flex;
+  justify-content: center; }
+
+.skills-box {
+  border: 1px solid orange;
+  border-radius: 10px;
+  height: 80vh;
+  width: 30%;
+  align-self: center;
+  position: fixed; }
 
 .projects {
   margin: 3%; }
