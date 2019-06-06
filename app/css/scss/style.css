@@ -148,8 +148,8 @@ a {
   .about p {
     margin-top: 20px;
     margin: 5%;
-    font-size: 1.5rem;
-    line-height: 30px; }
+    font-size: 1.2rem;
+    line-height: 35px; }
   .about img {
     transform: rotateY(180deg);
     width: 30%; }
