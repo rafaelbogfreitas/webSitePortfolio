@@ -67,4 +67,13 @@ $(document).ready(function(){
     }
   });
 
+  //skills box accordion effect
+  $('.skills-title').on('click', function(event){
+    if($(event.currentTarget).next().hasClass('hidden')){
+      $(event.currentTarget).next().removeClass('hidden');
+    } else {
+      $(event.currentTarget).next().addClass('hidden');
+    };
+  });
+
 });

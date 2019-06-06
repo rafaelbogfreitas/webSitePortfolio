@@ -102,7 +102,7 @@
   p {
     margin-top: 20px;
     margin: 5%;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     line-height: 30px;
   }
 
@@ -110,26 +110,39 @@
     transform: rotateY(180deg);
     width: 30%;
   }
-}
 
-.about-wrap{
-  width:60%;
-}
+  .about-wrap{
+    width:60%;
+  }
 
-.skills {
-  width: 40%;
-  height:100vh;
-  display:flex;
-  justify-content: center;
-}
+  .skills {
+    width: 40%;
+    height:100vh;
+    display:flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
 
-.skills-box{
-  border:1px solid $secondary-color;
-  border-radius: 10px;
-  height:80vh;
-  width: 30%;
-  align-self: center;
-  position: fixed;
+  .skills-box{
+    border:1px solid $secondary-color;
+    border-radius: 10px;
+    height:auto; //or '80vh' have to test
+    width: 30%;
+    align-self: center;
+    position: fixed;
+    overflow:hidden;
+  }
+
+  .skills-title {
+    padding:3%;
+    font-size:1.2rem;
+    color:white;
+    background:rgb(245, 167, 51);
+  }
+
+  .skills-content{
+    font-size:0.9rem;
+  }
 }
 
 
