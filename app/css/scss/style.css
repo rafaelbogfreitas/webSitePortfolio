@@ -99,7 +99,8 @@ a {
       border-bottom: 1px solid orange; }
     #main-nav li:hover {
       color: orange;
-      transition: all 0.3s; }
+      transition: all 0.3s;
+      cursor: pointer; }
 
 .container {
   margin: 3%;
@@ -147,37 +148,56 @@ a {
 .about {
   display: flex;
   margin: 3%; }
+  @media screen and (max-width: 900px) {
+    .about {
+      flex-direction: column;
+      align-items: center; } }
   .about h1 {
     margin: 5%; }
   .about p {
     margin-top: 20px;
     margin: 5%;
     font-size: 1.1rem;
-    line-height: 30px; }
+    line-height: 30px;
+    text-align: justify; }
   .about img {
     transform: rotateY(180deg);
     width: 30%; }
   .about .about-wrap {
-    width: 60%; }
+    width: 65%; }
+    @media screen and (max-width: 900px) {
+      .about .about-wrap {
+        width: 90%; } }
   .about .skills {
-    width: 40%;
+    width: 35%;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: flex-start; }
+    @media screen and (max-width: 900px) {
+      .about .skills {
+        width: 100%; } }
   .about .skills-box {
     border: 1px solid orange;
     border-radius: 10px;
     height: auto;
-    width: 30%;
+    width: 32%;
     align-self: center;
     position: fixed;
     overflow: hidden; }
+    @media screen and (max-width: 900px) {
+      .about .skills-box {
+        align-self: flex-start;
+        position: static;
+        width: 80%; } }
   .about .skills-title {
     padding: 3%;
     font-size: 1.2rem;
     color: white;
-    background: #f5a733; }
+    background: orange; }
+    .about .skills-title:hover {
+      font-weight: bold;
+      cursor: pointer; }
   .about .skills-content {
     font-size: 0.9rem; }
 
@@ -202,7 +222,8 @@ a {
         margin-left: 3%; }
       .projects .project-container .project-description p {
         font-size: 1rem;
-        margin: 3%; }
+        margin: 3%;
+        text-align: justify; }
         .projects .project-container .project-description p a {
           color: orange; }
       .projects .project-container .project-description .show-more {
@@ -211,6 +232,8 @@ a {
         padding-right: 10px;
         border-radius: 6px;
         color: orange; }
+        .projects .project-container .project-description .show-more:hover {
+          cursor: pointer; }
       .projects .project-container .project-description i {
         color: orange;
         font-size: 2rem; }
