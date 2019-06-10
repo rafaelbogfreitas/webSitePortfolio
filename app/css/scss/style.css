@@ -104,7 +104,7 @@ a {
 
 .container {
   margin: 3%;
-  min-height: 100vh;
+  max-height: 100vh;
   display: flex;
   flex-direction: row; }
   .container .title-container .icons-container {
@@ -173,8 +173,7 @@ a {
     width: 35%;
     height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: flex-start; }
+    justify-content: center; }
     @media screen and (max-width: 900px) {
       .about .skills {
         width: 100%; } }
@@ -183,8 +182,8 @@ a {
     border-radius: 10px;
     height: auto;
     width: 32%;
-    align-self: center;
     position: fixed;
+    top: 25%;
     overflow: hidden; }
     @media screen and (max-width: 900px) {
       .about .skills-box {
@@ -195,14 +194,14 @@ a {
     padding: 3%;
     font-size: 1.2rem;
     color: white;
-    background-image: linear-gradient(to right, orange, orange);
+    background: orange;
     position: relative; }
     .about .skills-title:after {
       position: absolute;
       top: 0;
       left: 0;
       z-index: 1;
-      background-image: linear-gradient(to left, rgba(148, 71, 0, 0.5), transparent);
+      background-image: linear-gradient(to left, #ffd195, transparent);
       content: '';
       text-align: left;
       transform: scaleX(0);
@@ -217,8 +216,22 @@ a {
     .about .skills-title:hover {
       font-weight: bold;
       cursor: pointer; }
-  .about .skills-content p {
+  .about .skills-content {
+    padding: 2%;
     font-size: 0.9rem; }
+    .about .skills-content h3 {
+      font-size: 1rem;
+      font-weight: bold;
+      margin: 1%; }
+    .about .skills-content ul {
+      margin: 1%; }
+    .about .skills-content li {
+      margin: 10px 0 10px;
+      line-height: 1rem; }
+      .about .skills-content li span {
+        color: orange;
+        font-size: 0.8rem;
+        font-style: italic; }
 
 .projects {
   margin: 3%; }
