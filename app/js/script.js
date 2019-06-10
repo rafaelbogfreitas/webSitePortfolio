@@ -67,4 +67,22 @@ $(document).ready(function(){
     }
   });
 
+  //skills box accordion effect
+  $('.skills-title').on('click', function(event){
+    if($(event.currentTarget).next().hasClass('hidden')){
+      $('.skills-box').find('.skills-content').addClass('hidden');
+      $(event.currentTarget).next().removeClass('hidden');
+    } else {
+      $(event.currentTarget).next().addClass('hidden');
+    };
+  });
+  //opens/closes all sections of the skills box if double clicked
+  $('.skills-box').on('dblclick', function(){
+    if($('.skills-content').hasClass('hidden') == true){
+      $('.skills-box').find('.skills-section').children().removeClass('hidden');
+    } else {
+      $('.skills-box').find('.skills-section').children('.skills-content').addClass('hidden');
+    }
+  });
+
 });
