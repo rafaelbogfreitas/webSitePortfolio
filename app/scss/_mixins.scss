@@ -1,13 +1,25 @@
-@mixin gradient($direction:to right, $color1: black, $color2: red){
-  background-image: linear-gradient($direction, $color1, $color2), url('../../../dist/images/pier.jpeg');
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
+
+//flex-box vendor prefixes mixin
+@mixin flex($property, $value){
+  #{$property}: $value;
+  -moz-#{$property}: $value;
+  -webkit-#{$property}: $value;
+  -ms-#{$property}: $value;
 }
 
-@mixin break($value) {
-  @media screen and (max-width: $value){
-    @content
+//mixins for mediqueries breakpoints
+@mixin large {
+  @media only screen and (max-width:1000px) {@content};
+}
+@mixin medium {
+  @media only screen and (max-width:900px) {@content};
+}
+@mixin  small {
+  @media only screen and (max-width:500px) {@content};
+}
+
+@mixin break ($value) {
+  @media only screen and (max-width: $value){
+    @content;
   }
 }

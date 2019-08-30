@@ -1,0 +1,51 @@
+//=-=-=-=-=-=-=-=--=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-
+//      CONTACTS Section styles
+//-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=---=-=-=-=-=--=--=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=
+
+.contact {
+  @include flex(display, flex);
+  @include flex(flex-direction, column);
+
+  margin-left: 50px;
+
+  @include large {
+    margin-left:0;
+  }
+
+  h1 {
+    margin: 5%;
+  }
+  p{
+    margin:5%;
+    font-size: 1.5rem;
+  }
+  .icons-container{
+    width: 90%;
+
+    @include flex(display, flex);
+    @include flex(justify-content, space-between);
+    @include flex(align-self, center);
+
+    margin:5%;
+
+    @include large {
+      width: 100%;
+      @include flex(justify-content, space-between);
+      margin: 5%;
+    }
+
+    a{
+      font-size:3rem;
+      color: $secondary-color;
+      &:hover{
+        transform: scale(1.2);
+        transition: all 0.2s;
+      }
+
+      @include large {
+        padding: 3%;
+      }
+      
+    }
+  }
+}

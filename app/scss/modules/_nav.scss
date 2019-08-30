@@ -1,0 +1,105 @@
+//=-=-=-=-=-=-=-=--=-=-=--=-=-=-=-=-=-=-=-=-=-=-=//-=-=-=-=-=--=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-
+//     NAV session styles                        //
+//-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=---=-=-=-=-=--=--//=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-
+
+#main-nav {
+  @include flex(display, flex);
+  @include flex(justify-content, flex-end);
+
+  z-index: 5;
+  background: $backgrounds-color;
+  position:fixed;
+  width: 100%;
+  top:0;
+  right:0;
+  list-style: none;
+
+  //media queries
+  @include medium {
+    @include flex(display, flex);
+    @include flex(justify-content, center);
+
+    border-bottom: 1px solid $secondary-color;
+  }
+
+  @include small {
+    @include flex(flex-direction, column);
+    @include flex(align-items, center);
+
+    width: 99%;
+    margin: 0 auto;
+    position: static;
+    border-bottom: 0px;
+  }//media queries
+
+  li {
+    display:block;
+
+    //media queries
+    @include medium {
+      padding: 5px;
+      font-size: 1rem;
+    }
+
+    @include small {
+      display: none;
+      font-size: 1.2rem;
+    }//media queries
+
+    &#down-arrow{
+      display:none;
+      border-bottom:1px solid $secondary-color;
+
+      //media queries
+      @include small {
+        position: relative;
+        width: 99%;
+        height: 20px;
+        display:block;
+        padding:10px;
+        .dropdown-container{
+
+          @include flex(display, flex);
+          @include flex(align-items, center);
+
+          position: absolute;
+          left:30px;
+          top: 0;
+          width: 15px;
+          height:100%;
+          .dropdown-icon,
+          .dropdown-icon::before,
+          .dropdown-icon::after{
+            display:block;
+            background: $secondary-color;
+            width: 15px;
+            height: 2px;
+            border-radius: 2px;
+            position: relative;
+            transform:scale(1.1);
+          }
+          .dropdown-icon::before,
+          .dropdown-icon::after{
+            content:"";
+            position: absolute;
+          }
+          .dropdown-icon::before{
+            bottom:5px;
+          }
+          .dropdown-icon::after{
+            top:5px;
+          }
+        }
+      }//media queries
+    }
+    width: 150px;
+    margin:1%;
+    font-size: 1.3rem;
+    text-align: center;
+    &:hover{
+      color:$secondary-color;
+      transition:all 0.3s;
+      cursor: pointer;
+    }
+  }
+}

@@ -22,6 +22,7 @@ $(document).ready(function(){
   $('#about-btn').on('click', function(){
     $('.container').hide();
     $('.content').show().find('.about').show().siblings().hide();
+    $('.skills-box').show();
   });
 
   //Projects button 'click' event listener
@@ -40,7 +41,6 @@ $(document).ready(function(){
   //Show more section
   $('.more').hide();
   $('.show-more').on('click', function(event){
-    //$(event.currentTarget).next().toggle();
     $(event.currentTarget).parent().parent().next().slideToggle(100);
     if($(event.currentTarget).html() == 'Show More +'){
       $(event.currentTarget).html('Show Less -');
