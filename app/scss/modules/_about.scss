@@ -16,23 +16,18 @@
     margin:auto;
   }//media queries
 
-  margin: 3%; 
+  margin: 3%;
 
   h1 {
-    margin:5%;
+    margin:$margin-lg-screens;
   }
 
   p {
-    margin-top: 20px;
-    margin: 5%;
+    margin-top: $margin-lg-screens;
+    margin: $margin-lg-screens;
     font-size: 1.1rem;
     line-height: 1.8rem;
     text-align: justify;
-  }
-
-  img {
-    transform: rotateY(180deg);
-    width: 30%;
   }
 
   .about-wrap{

@@ -71,7 +71,6 @@ function compileSass(cb){
 	gulp.src(sassSrc)
 	.pipe(sass())
 	.pipe(gulp.dest(sassDest));
-	gulp.watch(sassSrc, compileSass);
 	cb();
 }
 
@@ -83,8 +82,13 @@ function pipeFonts(cb){
 	cb();
 }
 
+//watch for changes in scss files
+function watch(cb){
+	gulp.watch(sassSrc, compileSass);
+}
+
 
 //'gulp dist' command to minify files and pipe all to the dist folder
 exports.dist = gulp.series(minifyHTML, minifyJS, minifyCSS, pipeFonts, images);
 //'gulp start' command to start watching and compiling .scss files
-exports.start = gulp.series(compileSass);
+exports.start = gulp.series(watch);

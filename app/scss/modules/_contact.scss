@@ -3,38 +3,46 @@
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=---=-=-=-=-=--=--=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=
 
 .contact {
-  @include flex(display, flex);
-  @include flex(flex-direction, column);
+  // width:100vw;
+  // height:100vh;
 
-  margin-left: 50px;
+  margin:3%;
+  @include flex(display, flex);
+
+  @include break(1100px){
+    @include flex(flex-direction, column);
+    @include flex(justify-content, flex-start);
+  }
 
   @include large {
     margin-left:0;
   }
 
   h1 {
-    margin: 5%;
+    margin: $margin-lg-screens;
   }
+
   p{
-    margin:5%;
+    margin:$margin-lg-screens;
     font-size: 1.5rem;
   }
+
   .icons-container{
-    width: 90%;
+    // width: 100%;
 
     @include flex(display, flex);
-    @include flex(justify-content, space-between);
-    @include flex(align-self, center);
+    // @include flex(justify-content, space-between);
+    // @include flex(align-self, center);
 
-    margin:5%;
+    margin:$margin-lg-screens;
 
     @include large {
       width: 100%;
       @include flex(justify-content, space-between);
-      margin: 5%;
     }
 
     a{
+      margin-right: 15%;
       font-size:3rem;
       color: $secondary-color;
       &:hover{
@@ -43,9 +51,19 @@
       }
 
       @include large {
-        padding: 3%;
+        margin-right: 10%;
+      // padding: 3%;
       }
-      
+
+    }//a
+
+  }//icons-container
+  .info-wrap {
+    width:50%;
+    height: 100vh;
+    @include break(1100px){
+      height:auto;
+      width: 100%;
     }
   }
-}
+}//.contacts

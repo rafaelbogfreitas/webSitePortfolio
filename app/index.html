@@ -44,7 +44,7 @@
         <div class="headline headline2">FREITAS</div>
         <div class="subtitle">Front-End Web Development</div>
         <div class="icons-container">
-          <a href="mailto:rafaelborges1985@hotmail.com">
+          <a href="mailto:rafaelbogfreitas@gmail.com">
             <i class="fas fa-envelope-square contact-icons"></i>
           </a>
           <a href="https://www.linkedin.com/in/rafael-borges-de-oliveira-gouveia-e-freitas-49b04016a/">
@@ -127,6 +127,7 @@
                   <li>JavaScript for very beginners </br><span>Kirupa</span></li>
                   <li>The New CSS Layout </br><span>Rachel Andrews</span></li>
                   <li>You Don't Know JS: Scopes and Closures </br><span>Kyle Simpson</span></li>
+                  <li>Learning React</br><span>Kirupa</span></li>
                 </ul>
                 <h3>Reading</h3>
                 <ul>
@@ -144,6 +145,7 @@
                 <li>Free Code Camp</li>
                 <li>Code Academy Pro</li>
                 <li>Linkedin Learning</li>
+                <li>Skillshare</li>
                 <li>Flexbox Zombies</li>
                 </ul>
               </section>
@@ -166,28 +168,51 @@
 
       <!-- CONTACT section -->
       <div class="contact">
-        <h1>Get In Touch!</h1>
+        <div class="info-wrap">
 
-        <p>I will be very happy to meet with you, have a cup of coffee,
-          tell you about me and share my experience. Thanks for visiting! </p>
+          <div class="info-container">
+            <h1>Get In Touch!</h1>
+            <p>I will be very happy to meet with you, have a cup of coffee,
+              tell you about me and share my experience. Thanks for visiting! </p>
+          </div>
 
-        <div class="icons-container">
-          <a href="mailto:rafaelborges1985@hotmail.com">
-            <i class="fas fa-envelope-square"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/rafael-borges-de-oliveira-gouveia-e-freitas-49b04016a/">
-            <i class="fab fa-linkedin"></i>
-          </a>
-            <a href="https://github.com/rafaelbogfreitas">
-            <i class="fas fa-code-branch"></i>
-          </a>
-          <a href="https://twitter.com/RafaelF03113877">
-            <i class="fab fa-twitter-square"></i>
-          </a>
-          <a href="https://www.freecodecamp.org/rafaelborges">
-            <i class="fab fa-free-code-camp"></i>
-          </a>
-        </div><!-- icons container -->
+
+          <div class="icons-container">
+            <a href="mailto:rafaelbogfreitas@gmail.com">
+              <i class="fas fa-envelope-square"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/rafael-borges-de-oliveira-gouveia-e-freitas-49b04016a/">
+              <i class="fab fa-linkedin"></i>
+            </a>
+              <a href="https://github.com/rafaelbogfreitas">
+              <i class="fas fa-code-branch"></i>
+            </a>
+            <a href="https://twitter.com/RafaelF03113877">
+              <i class="fab fa-twitter-square"></i>
+            </a>
+            <a href="https://www.freecodecamp.org/rafaelborges">
+              <i class="fab fa-free-code-camp"></i>
+            </a>
+          </div><!-- icons container -->
+
+        </div><!-- info-wrap -->
+        <div class="form-wrap">
+          <form class="" action="index.html" method="post" netlify>
+            <div class="form-section">
+              <input type="text" name="name" required>
+              <label for="name">Name</label>
+            </div>
+            <div class="form-section">
+              <input type="email" name="email" required>
+              <label for="email">Email</label>
+            </div>
+            <div class="form-section" required>
+              <textarea name="message" rows="8" cols="80"></textarea>
+              <label for="message">Message</label>
+            </div>
+            <input type="submit" value="Send">
+          </form>
+        </div><!--form-wrap-->
 
       </div>
 
@@ -203,12 +228,21 @@
           <!-- Project Description -->
           <div class="project-description">
             <h2>J World Music</h2>
-            <p>My first commercial website.</p>
+            <p>This was my first commercial project, developed for a colleague who works as a musician.
+            He asked me for a website where he could show his music and videos and have a short 'about me'
+            to introduce himself and work. He had no idea of how he wanted it to look like, so I also
+            designed the page.</p>
+            <p>In this project I was more advanced with SASS, JavaScript and JQuery, so I had more liberty
+            for getting more creative. Mixins where used to automate the inclusion of vendor prefixes for flex-box.
+            With JQuery and JavaScript I designed a simple song player and to create its logics was probably the most
+            challenging part of the project.</p>
             <p><nobr><span class="show-more">Show More +</span></nobr></p>
 
             <!-- Show More -->
             <section class="more">
-              <p></p>
+              <p>I was also comfortable with GULP and organized my working environment with modules and partials
+              to keep the code maintanable. I set up commands to minify all the code and pipe it to a distribution
+              folder which I am hosting in Netlify. Website is live at: <a href="https://www.jworldmusic.co.uk">https://www.jworldmusic.co.uk</a></p>
               <h3>Technologies used</h3>
               <ul>
                 <li>HTML5</li>
@@ -243,7 +277,7 @@
 
             <!-- Show More -->
             <section class="more">
-              <p>I also was familiar with JQuery and used this project to expand my knowledge and give my portfolio interactivity.
+              <p>I also was familiar with JQuery and used it in the project to give my portfolio interactivity.
               Once again I have expanded my skills with Flexbox and was happy and comfortable controlling the layout as I wanted. The website
               is responsive and looks good in every screen size.</p>
               <h3>Technologies used</h3>

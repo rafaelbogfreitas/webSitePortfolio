@@ -15,6 +15,10 @@
   list-style: none;
 
   //media queries
+  @media only screen and (min-width:1450px){
+    @include flex(justify-content, space-around);
+  }
+
   @include medium {
     @include flex(display, flex);
     @include flex(justify-content, center);
