@@ -192,17 +192,16 @@ a {
       transition: all 0.3s;
       cursor: pointer; }
 
-.navIconClosed {
-  background: white !important;
-  transition: background 0.2s linear; }
-  .navIconClosed::after {
+.dropdown-icon-closed {
+  background: white !important; }
+  .dropdown-icon-closed::after {
     transform: rotate(42deg) !important;
     transform-origin: right;
-    transition: transform 0.2s linear; }
-  .navIconClosed::before {
+    transition: transform 0.2s ease-out; }
+  .dropdown-icon-closed::before {
     transform: rotate(-42deg) !important;
     transform-origin: right;
-    transition: transform 0.2s linear; }
+    transition: transform 0.2 ease-in; }
 
 .container {
   margin: 3%;
