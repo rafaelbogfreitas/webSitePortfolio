@@ -78,9 +78,10 @@
             background: $secondary-color;
             width: 15px;
             height: 2px;
-            border-radius: 2px;
+            // border-radius: 2px;
             position: relative;
-            transform:scale(1.1);
+            // transform:scale(1.1);
+            transition:transform 0.2s linear;
           }
           .dropdown-icon::before,
           .dropdown-icon::after{

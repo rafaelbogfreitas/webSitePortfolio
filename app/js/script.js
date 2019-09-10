@@ -57,6 +57,7 @@ $(document).ready(function(){
 
   //controls dropdown effect for the NAV in mobile version
   $('#down-arrow').on('click', function(){
+    $('.dropdown-icon').toggleClass('navIconClosed');
     $('#down-arrow').siblings().slideToggle(100);
   });
 

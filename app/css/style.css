@@ -177,9 +177,8 @@ a {
               background: orange;
               width: 15px;
               height: 2px;
-              border-radius: 2px;
               position: relative;
-              transform: scale(1.1); }
+              transition: transform 0.2s linear; }
             #main-nav li#down-arrow .dropdown-container .dropdown-icon::before,
             #main-nav li#down-arrow .dropdown-container .dropdown-icon::after {
               content: "";
@@ -192,6 +191,18 @@ a {
       color: orange;
       transition: all 0.3s;
       cursor: pointer; }
+
+.navIconClosed {
+  background: white !important;
+  transition: background 0.2s linear; }
+  .navIconClosed::after {
+    transform: rotate(42deg) !important;
+    transform-origin: right;
+    transition: transform 0.2s linear; }
+  .navIconClosed::before {
+    transform: rotate(-42deg) !important;
+    transform-origin: right;
+    transition: transform 0.2s linear; }
 
 .container {
   margin: 3%;
