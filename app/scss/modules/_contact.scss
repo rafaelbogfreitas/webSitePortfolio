@@ -8,6 +8,7 @@
 
   margin:3%;
   @include flex(display, flex);
+  @include flex(flex-direction, column);
 
   @include break(1100px){
     @include flex(flex-direction, column);
@@ -60,9 +61,8 @@
   }//icons-container
   .info-wrap {
     width:50%;
-    height: 100vh;
     @include break(1100px){
-      height:auto;
+      // height:auto;
       width: 100%;
     }
   }
